@@ -1,0 +1,931 @@
+/* font */
+@font-face {
+    font-family: font1;
+    src: url(Px437_IBM_PS-55_re.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(Lovelt__\ copy.ttf);
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 769px) {
+
+    /* Text */
+
+    a {
+        text-decoration: none;
+    }
+
+    .link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+
+    }
+
+    .link a:hover {
+        color: rgb(185, 0, 0);
+        transition: 1s;
+        stroke: 10px;
+    }
+
+    .links-to-others {
+        text-decoration: none;
+        color: #0000ee;
+    }
+
+
+
+    /* Layout */
+
+    body {
+        margin: 0;
+        font-family: font1;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+
+
+    /* Nav */
+
+    nav {
+        font-size: medium;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-family: font1;
+        font-size: larger;
+        border: 1;
+        color: rgb(255, 255, 255);
+        display: none;
+        background-color: rgb(226, 226, 226);
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        z-index: 3;
+        border-bottom: 1px solid black;
+    }
+
+    .desktop-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: left;
+        width: 100vw
+    }
+
+    .navButton {
+        all: unset;
+        color: black;
+        cursor: pointer;
+    }
+
+    .navButton.selected {
+        background-color: #000000;
+        color: white;
+    }
+
+    .navButtonHome {
+        color: #000000;
+    }
+
+    .nav-button-container {
+        margin: 0;
+    }
+
+    .accordion-menu {
+        display: none;
+    }
+
+    .accordion-content {
+        display: none;
+    }
+
+
+    /* Sidebar */
+
+    .image {
+        max-width: 100%;
+    }
+
+    .info-sidebar-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 9%;
+        height: 100%;
+        padding: 2rem 1rem 0 1rem;
+        left: 0;
+        background-color: white;
+        border-right: #000000 1px solid;
+        z-index: 1;
+    }
+
+    .info-container * {
+        margin: 0;
+    }
+
+    .email {
+        text-decoration: none;
+        width: 0;
+        color: #0000ee;
+    }
+
+    @media screen and (min-width: 1400px) {
+        .info-sidebar-container {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1399px) {
+        .info-sidebar-container {
+            font-size: 20px;
+        }
+    }
+
+
+
+    /* Containers */
+
+    .everything-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-height: calc(100vh - 21px);
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+        width: 100vw;
+        margin-top: 21px;
+    }
+
+    .tab-content-container {
+        flex-direction: row;
+        display: none;
+    }
+
+    .first-item{
+        margin-left: 20vw;
+    }
+
+    .item {
+        display: flex;
+        width: 80vw;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 30px 30px 0;
+        margin-left: 20vw;
+    }
+
+
+
+    /*.item-spread {
+        display: flex;
+        width: 20vw;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 30px 30px 0;
+        margin-left: 20vw;
+    } */   
+
+    .item-more {
+        display: flex;
+        width: fit-content;
+    }
+
+    .item-infos {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem 0 1rem;
+        width: 30%;
+    }
+
+    .item-legend {
+        font-size: 1rem;
+        margin-left: -50%;
+    }
+
+    .title {
+        margin-top: 0.2em;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    .iframe {
+        padding-top: 0%;
+        margin-left: -50%;
+        display: block;
+        /* Show the SoundCloud embed on desktop */
+    }
+
+    .item-img {
+        height: auto;
+        max-width: 70%;
+        display: block;
+        object-fit: contain;
+        /* adjust 21px to your nav height, and 5px padding */
+
+
+    }
+
+    .item-img-resize {
+        width: 0%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .item-imgBorder {
+        height: auto;
+        max-width: 70vw;
+        max-height: 91vh;
+        display: block;
+        object-fit: contain;
+        height: calc(100vh - 3%);
+        /* adjust 60px to your nav height */
+        border-right: 1px solid black;
+        margin-right: 5%;
+        border: 1px solid black;
+    }
+
+    /* .videos {
+        max-width: 100%;
+        max-height: 100%;
+    } */
+
+    .video-container {
+        width: 70%;
+        height: 100%;
+    }
+
+    video {
+        object-fit: contain;
+    }
+
+
+    /* Pages */
+
+    /* Welcome page */
+
+    .linkContainer {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+        font-size: larger;
+    }
+
+    .tab-content-container#homepage-section {
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-size: 100% 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        background-blend-mode: lighten;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    #welcome-section {
+        font-family: font1;
+        font-size: 4em;
+    }
+
+    .layer {
+        z-index: 0;
+        position: absolute;
+        padding-top: 0rem;
+        padding-left: 1.2rem;
+    }
+
+    #layernumber {
+        z-index: 0;
+        position: absolute;
+        padding-top: 3rem;
+        color: #0000ee;
+        padding-left: 1.2rem;
+    }
+
+    .gifbg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        /* Adjust this for size */
+        max-width: 60%;
+        /* Set a max size */
+        height: auto;
+    }
+
+
+
+    #contact-section {
+        display: none;
+        /* Hide by default */
+    }
+
+    /* Design page */
+    .gif {
+        max-width: 100%;
+    }
+
+
+    /* Slideshow */
+
+    * {
+        box-sizing: border-box
+    }
+
+    .mySlides1, .mySlides2 {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container1 {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        margin-right: 0;
+        margin-top: 19px;
+        padding-bottom: 0.4em;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        margin-right: 0;
+        margin-top: 19px;
+        padding-bottom: 0.4em;
+    }
+
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: max-content;
+        padding: 16px;
+        margin-top: -22px;
+        color: #0000ee;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 1;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #000000;
+        font-size: 15px;
+        margin-top: 1.5rem;
+        padding: 5px 10px;
+        position: absolute;
+        top: 0;
+        background-color: #ffffff;
+    }
+
+    .title-text {
+        color: #000000;
+        font-size: 30px;
+        margin-top: 31.7rem;
+        margin-left: 2rem;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .title-text-note {
+        color: #000000;
+        font-size: 22px;
+        margin-top: 33.5rem;
+        margin-left: 2rem;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+
+
+    /* Text */
+
+    a {
+        text-decoration: none;
+    }
+
+    .link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+
+    }
+
+    .link a:hover {
+        color: rgb(185, 0, 0);
+        transition: 1s;
+        stroke: 10px;
+    }
+
+    .links-to-others {
+        text-decoration: none;
+        color: #0000ee;
+    }
+
+
+    /* Layout */
+
+    body, html {
+        font-family: font1;
+        padding-top: 60px;
+        /* Adjust based on mobile header height */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        /* Prevent horizontal overflow */
+        margin-top: 3%;
+    }
+
+    /* Sidebar */
+
+    .info-sidebar-container {
+        display: none;
+        /* Hide sidebar */
+    }
+
+    /* Mobile accordion nav menu */
+
+    .accordion-menu {
+        display: block !important;
+        /* Show the mobile menu */
+    }
+
+    .accordion-menu {
+        display: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Optional shadow */
+    }
+
+    .accordion {
+        background-color: rgb(226, 226, 226);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 5px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 0;
+        border-top: 0;
+        border-left: 0;
+        text-align: left;
+        font-size: 18px;
+        font-family: font1;
+        /* Customize your font */
+        display: block;
+    }
+
+
+    .accordion-content {
+        display: none;
+        background-color: white;
+        padding: 0px;
+    }
+
+    .accordion-content a {
+        display: block;
+        color: #333;
+        padding: 10px;
+        padding-left: 5px;
+        text-decoration: none;
+        font-size: large;
+    }
+
+    .accordion-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Show accordion menu when active */
+    .accordion.active+.accordion-content {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+
+
+    /* Sidebar */
+
+    .info-container {
+        display: none;
+        /* Hide sidebar */
+    }
+
+    .image {
+        display: none;
+    }
+
+    /* Containers */
+
+
+    .content-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding-left: 0%;
+        padding-top: 5%;
+        /* Ensure no overlap of content */
+    }
+
+    .tab-content-container {
+        width: 90%;
+        flex-direction: column;
+        display: none;
+    }
+
+    .item, .item-more, .item-imgBorder {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+        height: 100% !important;
+        width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        /* Stack the items vertically */
+        align-items: center;
+        /* Center the content */
+        border-bottom: none;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 100% !important;
+        width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    #cover-img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .item-more {
+        display: flex;
+        flex-direction: column;
+        /* Stack the items vertically */
+        align-items: center;
+        /* Center the content */
+        text-align: center;
+        /* Center the captions below the images */
+        margin: 0;
+        padding: 0;
+        height: 100% !important;
+        width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .item-infos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* Ensure the captions fill the screen width */
+        text-align: center;
+        /* Center the captions below the images */
+        margin-top: 10px;
+    }
+
+    .item-infos h3, .item-infos p {
+        margin-top: 1em;
+    }
+
+    .item-legend, .iframe {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        font-size: 1 rem;
+    }
+
+    .title {
+        margin-top: 0.2em;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+
+    .item-img {
+        cursor: pointer;
+        /* Change cursor to indicate it's clickable */
+        display: block;
+        height: 100% !important;
+        width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .item-img-resize {
+        width: 100%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .item-imgBorder {
+        cursor: pointer;
+        /* Change cursor to indicate it's clickable */
+        max-width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+        height: 100% !important;
+        width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    /* Ensure iframe takes full width and doesn't overflow */
+
+    .iframe iframe {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        padding-top: 0%;
+    }
+
+    .videos {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    video {
+        width: 100% !important;
+        height: auto !important;
+        /* Keeps the aspect ratio */
+    }
+
+    /* Pages */
+
+    /* Welcome */
+
+    .tab-content-container#homepage-section {
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-size: 100% 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        background-blend-mode: lighten;
+    }
+
+    .white-rectangle {
+        width: 100%;
+        /* Make the rectangle full width */
+        height: 150px;
+        /* Set the height of the rectangle */
+        background-color: rgb(255, 255, 255);
+        /* Set the color to white */
+        position: absolute;
+        /* Position it at the top */
+        top: 0%;
+        /* Align it at the top of the page */
+        left: 0;
+        /* Align it to the left */
+        z-index: 9999;
+        /* Ensure it appears on top of other content */
+    }
+
+    .linkContainer {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        font-size: larger;
+        margin-top: -30%;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    /* Homepage */
+
+    #welcome-section {
+        font-family: font1;
+        font-size: 4em;
+    }
+
+    .layer {
+        z-index: 0;
+        position: absolute;
+        margin-top: -4%;
+        margin-left: -4%;
+    }
+
+    #layernumber {
+        z-index: 0;
+        position: absolute;
+        margin-top: 9%;
+        margin-left: -4%;
+        color: #0000ee;
+    }
+
+    .gifbg {
+        position: absolute;
+        top: 32%;
+        left: 0;
+        max-width: 100vw;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* Design page */
+
+    .gif {
+        max-width: 100%;
+    }
+
+    /* Mobile contact page */
+
+    #contact-section.active {
+        display: block;
+        /* Shown when active */
+    }
+
+    h6 {
+        text-align: left;
+        font-size: large;
+        margin-top: 0%
+    }
+
+    .image-contact-page {
+        padding-top: 10%;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Slideshow */
+
+    .mySlides1 {
+        width: 335% !important;
+        margin-left: -100% !important;
+    }
+
+    .mySlides2 {
+        padding-top: 60%;
+        height: 100% !important;
+        width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        border: none;
+    }
+
+    * Slideshow container */ .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        margin-right: 0;
+        margin-top: 50rem;
+        padding-bottom: 0.4em;
+        border-bottom: solid 1px rgb(0, 0, 0);
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        width: max-content;
+        padding: 5px;
+        margin-top: -300px;
+        color: #0000ee;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 1;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #000000;
+        font-size: 15px;
+        margin-top: 115%;
+        padding: 5px 10px;
+        position: absolute;
+        top: 0;
+        background-color: #ffffff;
+    }
+
+    .title-text {
+        color: #000000;
+        font-size: 25px;
+        margin-top: 75%;
+        position: absolute;
+        top: 0;
+        margin-left: -2%;
+    }
+
+    .title-text-note {
+        color: #000000;
+        font-size: 17px;
+        margin-top: 100%;
+        margin-left: -2%;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+
+
+
+
+
+}
